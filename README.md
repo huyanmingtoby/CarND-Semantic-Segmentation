@@ -12,16 +12,19 @@ Make sure you have the following is installed:
 ##### Dataset
 Download the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip).  Extract the dataset in the `data` folder.  This will create the folder `data_road` with all the training a test images.
 
-### Start
-##### Implement
-Implement the code in the `main.py` module indicated by the "TODO" comments.
-The comments indicated with "OPTIONAL" tag are not required to complete.
-##### Run
-Run the following command to run the project:
-```
-python main.py
-```
-**Note** If running this in Jupyter Notebook system messages, such as those regarding test status, may appear in the terminal rather than the notebook.
+Or you can run the ```build.sh``` file to download the dataset.
+
+### Result
+
+The current implementation is based on the fully convolutional network with skip layer to perform pixels level classification, and trained on AWS AMI - **udacity-carnd-advanced-deep-learning**. You can follow the instruction [here](https://discussions.udacity.com/t/how-to-run-semantic-segmentation-on-aws/352069/49) to set up the environment for training. The implementation is easy, but understanding is not easy on the first time, you might need to spend time on the understanding and improve that model. It takes me about half hour to finish training for 15 epochs.
+
+![](output/um_000013.png)
+![](output/um_000019.png)
+![](output/uu_000021.png)
+
+The current training loss for 15 epochs
+
+![](training/loss.png)
 
 ### Submission
 1. Ensure you've passed all the unit tests.
